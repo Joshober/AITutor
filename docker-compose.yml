@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ai-tutor:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - PORT=3000
+    volumes:
+      - .:/app
+      - /app/node_modules
